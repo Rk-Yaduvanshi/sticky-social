@@ -1,0 +1,584 @@
+
+<!------------------------------------- mobile Social Sharing Bar ------------------------------------>
+<div class="share-bar">
+    <ul class="share-bar--list">
+      <li class="call share-bar--item">
+        <a class="share-bar--item-link" href="tel:+91-9594948647" title="Tweet this Article">
+        </a>
+      </li>
+      <li class="whatsapp share-bar--item">
+        <a class="share-bar--item-link" href="https://api.whatsapp.com/send/?phone=+91-9594948647">
+        </a>
+      </li>
+      <li class="envelope share-bar--item">
+        <a class="share-bar--item-link" href="mailto:sales@nanomagtech.com" title="Share on envelope">
+        </a> 
+      </li>
+    </ul>
+  </div>
+  <!------------------------------------- mobile Social Sharing Bar css ------------------------------------>
+  <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style>
+    @media (min-width: 768px) {
+      .share-bar {
+        display: none !important;
+      }
+    }
+  
+    @media (max-width: 767px) {
+      .side-bar-contact {
+        display: none !important;
+      }
+      footer{
+          padding-bottom: 50px;
+      }
+    }
+  
+    .fa-phone:before {
+      content: "\f095";
+    }
+  
+    .share-bar {
+      position: fixed;
+      bottom: 0;
+      height: 50px;
+      border: none;
+      background: #ffffff;
+      z-index: 4999991;
+      transform: translateZ(0) translate3d(0, 0, 0);
+      -webkit-transform: translateZ(0) translate3d(0, 0, 0);
+      -moz-transform: translateZ(0) translate3d(0, 0, 0);
+      transition: all 0.5s ease;
+      -webkit-transition: all 0.5s ease;
+      -moz-transition: all 0.5s ease;
+      display: flex;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      flex-direction: row;
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+      -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+      align-items: flex-start;
+      -webkit-box-align: start;
+      -webkit-align-items: flex-start;
+      -ms-flex-align: start;
+      width: 100%;
+      box-shadow: 0px -3px 3px 0px rgba(0, 0, 0, 0.12);
+    }
+  
+    .share-bar--list {
+      padding: 0;
+      list-style: none;
+    }
+  
+    .share-bar .share-bar--list {
+      display: flex;
+      flex: 1 1 auto;
+      -webkit-box-flex: 1;
+      -webkit-flex: 1 1 auto;
+      -ms-flex: 1 1 auto;
+      overflow: hidden;
+      text-align: left;
+      font-size: 0;
+    }
+  
+    .share-bar .share-bar--item {
+      display: inline-block;
+      width: 100%;
+      flex-grow: 1;
+      height: 50px;
+      line-height: 50px;
+    }
+  
+    .share-bar--item {
+      float: left;
+      display: block;
+      text-decoration: none;
+      text-align: center;
+      color: #ffffff;
+      overflow: hidden;
+    }
+  
+    /* Colours */
+    .facebook .share-bar--item,
+    .share-bar .facebook .share-bar--item-link,
+    .call .share-bar--item,
+    .share-bar .call .share-bar--item-link,
+    .whatsapp .share-bar--item,
+    .share-bar .whatsapp .share-bar--item-link,
+    .envelope .share-bar--item,
+    .share-bar .envelope .share-bar--item-link,
+    .linkedin .share-bar--item,
+    .share-bar .linkedin .share-bar--item-link,
+    .linkedin .share-bar--item,
+    .share-bar .linkedin .share-bar--item-link {
+      cursor: pointer;
+      width: 100%;
+      min-width: 100%;
+      display: block;
+    }
+  
+    /* call */
+    .call .share-bar--item,
+    .share-bar .call .share-bar--item-link {
+      /* background-color: #ff7730; */
+      background-color: #ff7730;
+      background-image: linear-gradient(20deg, #ff7730 0%, #ff9055 70%);  
+    }
+  
+    /* What's App */
+    .whatsapp .share-bar--item,
+    .share-bar .whatsapp .share-bar--item-link {
+      /* background-color: #61be4f; */
+      background-color: #28D146;
+      background-image: linear-gradient(20deg, #28D146 0%, #5FFC7B 70%);
+  
+    }
+  
+    /* envelope */
+    .envelope .share-bar--item,
+    .share-bar .envelope .share-bar--item-link {
+      background-color: #55acef;
+      background-color:#55acef;
+      background-image: linear-gradient(20deg,#55acef 0%, #60baff 70%);    
+    }
+  
+  
+    /* Icons */
+    .share-bar--item-link:before {
+      display: inline-block;
+      color: #ffffff;
+      font-size: 24px;
+    }
+  
+    /* call */
+    .share-bar .call .share-bar--item-link:before {
+      content: "\f095";
+      font-family: "FontAwesome";
+      font-style: normal;
+      text-rendering: optimizeLegibility;
+      text-transform: none;
+      -moz-osx-font-smoothing: grayscale;
+      -webkit-font-smoothing: antialiased;
+      font-smoothing: antialiased;
+    }
+  
+    /* What's App */
+    .share-bar .whatsapp .share-bar--item-link:before {
+      content: "\f232";
+      font-family: "FontAwesome";
+      font-style: normal;
+      text-rendering: optimizeLegibility;
+      text-transform: none;
+      -moz-osx-font-smoothing: grayscale;
+      -webkit-font-smoothing: antialiased;
+      font-smoothing: antialiased;
+    }
+  
+    /* envelope*/
+    .share-bar .envelope .share-bar--item-link:before {
+      content: "\f0e0";
+      font-family: "FontAwesome";
+      font-style: normal;
+      text-rendering: optimizeLegibility;
+      text-transform: none;
+      -moz-osx-font-smoothing: grayscale;
+      -webkit-font-smoothing: antialiased;
+      font-smoothing: antialiased;
+    }
+  </style>
+  
+  <!------------------------------------- mobile Social Sharing Bar ------------------------------------>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <div class="side-bar-contact">
+    <div class="right-corder-container">
+        <button class="right-corder-container-button" aria-label="phone" onmouseover="showLongText(this)"
+            onmouseout="hideLongText(this)">
+            <span class="short-text"><i class="fa fa-phone fa-fw"></i></span>
+            <span class="long-text">+91-9594948647</span>
+        </button>
+    </div>
+
+    <div class="right-corder-container1">
+        <button class="right-corder-container-button1" aria-label="email" onmouseover="showLongText1(this)"
+            onmouseout="hideLongText1(this)">
+            <span class="short-text1"><i class="fa fa-envelope fa-fw"></i></span>
+            <span class="long-text1">Request Quote</span>
+        </button>
+    </div>
+
+    <div class="right-corder-container2">
+        <a href="https://api.whatsapp.com/send/?phone=+91-9594948647"><button class="right-corder-container-button2"
+                aria-label="whatsapp"> <span class="short-text2"><i class="fa fa-whatsapp fa-fw"></i></span> <span
+                    class="long-text2"></span>
+            </button></a>
+    </div>
+</div>
+
+<script>
+    // JavaScript
+    function showLongText(element) {
+        var longTextElement = element.querySelector('.long-text');
+        if (longTextElement) {
+            longTextElement.classList.add('show-long-text');
+        }
+    }
+
+    function hideLongText(element) {
+        var longTextElement = element.querySelector('.long-text');
+        if (longTextElement) {
+            longTextElement.classList.remove('show-long-text');
+        }
+    }
+</script>
+<script>
+    // JavaScript
+    function showLongText1(element) {
+        var longTextElement = element.querySelector('.long-text1');
+        if (longTextElement) {
+            longTextElement.classList.add('show-long-text1');
+        }
+    }
+
+    function hideLongText1(element) {
+        var longTextElement = element.querySelector('.long-text1');
+        if (longTextElement) {
+            longTextElement.classList.remove('show-long-text1');
+        }
+    }
+</script>
+
+<style>
+    .long-text,
+    .long-text1 {
+        display: none;
+    }
+
+    .show-long-text,
+    .show-long-text1 {
+        display: inline-block;
+        overflow: hidden;
+    }
+</style>
+
+<style>
+    .list-icon li {
+        font-size: 14px;
+        margin: 0;
+    }
+
+    li {
+        list-style: none;
+    }
+
+    .line-bottom:after {
+        bottom: -1px;
+        content: "";
+        height: 2px;
+        left: 0;
+        position: absolute;
+        width: 50px;
+        background: #8cd50a !important;
+    }
+
+    .list-icon li i {
+        color: #555;
+        font-size: 14px;
+        height: 28px;
+        line-height: 28px;
+        margin: 5px 10px 5px 0;
+        text-align: center;
+        width: 28px;
+    }
+
+    .text-white {
+        --bs-text-opacity: 1;
+        color: rgba(var(--bs-white-rgb), var(--bs-text-opacity)) !important;
+    }
+
+    .list-icon.square li i {
+        background: #393186;
+        color: #555;
+        font-size: 12px;
+        height: 28px;
+        line-height: 28px;
+        margin: 5px 10px 5px 0;
+        text-align: center;
+        width: 28px;
+    }
+
+
+    @media only screen and (min-width: 767px) {
+
+        .right-corder-container-mobile,
+        .right-corder-container1-mobile {
+            display: none;
+        }
+    }
+
+    @media only screen and (max-width: 767px) {
+
+        .right-corder-container,
+        .right-corder-container1 {
+            display: none;
+        }
+
+        .right-corder-container2 {
+            top: 59% !important;
+        }
+
+        .media-mt {
+            margin-top: 20px;
+        }
+    }
+
+
+    .right-corder-container {
+        position: fixed;
+        right: .9em;
+        top: 56%;
+        bottom: 20px;
+        z-index: 10000;
+        overflow: hidden;
+    }
+
+    .right-corder-container1 {
+        position: fixed;
+        right: .9em;
+        top: 67%;
+        bottom: 20px;
+        z-index: 10000;
+        overflow: hidden;
+    }
+
+    .right-corder-container2 {
+        position: fixed;
+        right: .9em;
+        top: 45%;
+        bottom: 20px;
+        z-index: 1000
+    }
+
+
+    .right-corder-container2 .right-corder-container-button2 .long-text2 {
+        transition: opacity 1s;
+        opacity: 0;
+        color: #252525;
+        white-space: nowrap;
+        font-size: 0;
+        width: 0;
+        margin: 0
+    }
+
+    .right-corder-container2 .right-corder-container-button2 {
+        height: 55px;
+        width: 55px;
+        border: 3px solid #fff !important;
+        background-color: #40e676;
+        border-radius: 62px;
+        transition: all .3s;
+        cursor: pointer
+    }
+
+    .right-corder-container2 .right-corder-container-button2 span {
+        font-size: 30px;
+        color: #fff;
+        position: absolute;
+        left: 8px;
+        top: 13px;
+        line-height: 22px
+    }
+
+
+    .right-corder-container1 .right-corder-container-button1 .long-text1 {
+        transition: opacity 1s;
+        opacity: 0;
+        color: #252525;
+        white-space: nowrap;
+        font-size: 0;
+        width: 0;
+        margin: 0
+    }
+
+
+    .right-corder-container1 .right-corder-container-button1 {
+        height: 55px;
+        width: 55px;
+        border: 3px solid #fff !important;
+        background-color: #393186;
+        border-radius: 62px;
+        transition: all .3s;
+        cursor: pointer
+    }
+
+    .right-corder-container1 .right-corder-container-button1 span {
+        font-size: 30px;
+        color: #fff;
+        position: absolute;
+        left: 8px;
+        top: 12px;
+        line-height: 25px
+    }
+
+
+    .right-corder-container .right-corder-container-button .long-text {
+        transition: opacity 1s;
+        opacity: 0;
+        color: #252525;
+        white-space: nowrap;
+        font-size: 0;
+        width: 0;
+        margin: 0
+    }
+
+    .right-corder-container .right-corder-container-button {
+        height: 55px;
+        width: 55px;
+        border: 3px solid #fff !important;
+        background-color: #258fd1;
+        border-radius: 62px;
+        transition: all .3s;
+        cursor: pointer
+    }
+
+    .right-corder-container .right-corder-container-button span {
+        font-size: 30px;
+        color: #fff;
+        position: absolute;
+        left: 9px;
+        top: 14px;
+        line-height: 22px
+    }
+
+
+    .right-corder-container .right-corder-container-button:hover {
+        transition: all .4s cubic-bezier(.62, .1, .5, 1);
+        width: 250px;
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 5px
+    }
+
+    .right-corder-container .right-corder-container-button .long-text.show-long-text {
+        transition: opacity .7s, width 1ms linear 270ms, font-size 1ms linear 270ms;
+        opacity: 1;
+        margin-top: 2px;
+        margin-left: 35px;
+        font-size: 15px;
+        width: auto;
+        color: #fff
+    }
+
+
+    .right-corder-container1 .right-corder-container-button1:hover {
+        transition: all .4s cubic-bezier(.62, .1, .5, 1);
+        width: 250px;
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 5px
+    }
+
+    .right-corder-container1 .right-corder-container-button1 .long-text1.show-long-text1 {
+        transition: opacity .7s, width 1ms linear 270ms, font-size 1ms linear 270ms;
+        opacity: 1;
+        margin-top: 2px;
+        margin-left: 45px;
+        font-size: 15px;
+        width: auto;
+        color: #fff
+    }
+
+
+    .right-corder-container-mobile {
+        position: fixed;
+        right: .9em;
+        top: 70%;
+        bottom: 20px;
+        z-index: 10000
+    }
+
+    .right-corder-container1-mobile {
+        position: fixed;
+        right: .9em;
+        top: 81%;
+        bottom: 20px;
+        z-index: 10000
+    }
+
+    .right-corder-container1-mobile .right-corder-container-button1 .long-text1 {
+        transition: opacity 1s;
+        opacity: 0;
+        color: #252525;
+        white-space: nowrap;
+        font-size: 0;
+        width: 0;
+        margin: 0
+    }
+
+
+    .right-corder-container1-mobile .right-corder-container-button1 {
+        height: 55px;
+        width: 55px;
+        border: 3px solid #fff !important;
+        background-color: #393186;
+        border-radius: 62px;
+        transition: all .3s;
+        cursor: pointer
+    }
+
+    .right-corder-container1-mobile .right-corder-container-button1 span {
+        font-size: 30px;
+        color: #fff;
+        position: absolute;
+        left: 8px;
+        top: 12px;
+        line-height: 25px
+    }
+
+    .right-corder-container-mobile .right-corder-container-button .long-text {
+        transition: opacity 1s;
+        opacity: 0;
+        color: #252525;
+        white-space: nowrap;
+        font-size: 0;
+        width: 0;
+        margin: 0
+    }
+
+    .right-corder-container-mobile .right-corder-container-button {
+        height: 55px;
+        width: 55px;
+        border: 3px solid #fff !important;
+        background-color: #258fd1;
+        border-radius: 62px;
+        transition: all .3s;
+        cursor: pointer
+    }
+
+    .right-corder-container-mobile .right-corder-container-button span {
+        font-size: 30px;
+        color: #fff;
+        position: absolute;
+        left: 9px;
+        top: 14px;
+        line-height: 22px
+    }
+    /* font-awesome.min.css */
+
+</style>
